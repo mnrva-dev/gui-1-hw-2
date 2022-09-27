@@ -1,29 +1,32 @@
-/* header, hgroup, nav, footer, figure, figcaption, aside, section, article {
-	display: block;
-} */
+/* basic body styling */
 body {
 	background-image: url("ptrbackground.jpg");
 	background-color: #00569f;
 	color: #666666;
 	font-family: Arial, Helvetica, sans-serif;
+	/* repeat the background gradient horizontally only */
 	background-repeat:repeat-x;
 }
 header {
 	color: white;
 	background-color: #000033;
+	/* place the sunset image to the right, centered */
 	background-image: url("sunset.jpg");
 	background-repeat: no-repeat;
 	background-position: right center;
 	height: 60px;
 	width: 100%;
+	/* set the position of the header within the page grid  */
 	grid-column-start: 1;
 	grid-column-end: span 2;
 }
+/* set margin of page header */
 h1 {
 	margin: 12px;
 }
 nav {
 	background-color: #88CCFF;
+	/* set position of nav in grid */
 	grid-row-end: span 3;
 }
 nav a {
@@ -32,6 +35,7 @@ nav a {
 	text-decoration: none;
 }
 nav ul {
+	/* style for list items, remove bullets from list */
 	list-style-type: none;
 	padding-left: 1em;
 	padding-right: 1em;
@@ -42,19 +46,24 @@ nav ul {
 	min-width: 600px;
 	margin: auto;
 	background-color: #FFFFFF;
+	/* grid display to format the child elements */
 	display: grid;
+	/* grid has two columns and three rows */
 	grid-template-columns: 200px auto;
 	grid-template-rows: 60px auto 60px;
 }
 #content {
+	/* add space between nav and content */
 	padding-left: 2em;
 	margin-bottom: 30px;
 }
 img {
+	/* make text wrap beside image */
 	float: left;
 	margin-right: 20px;
 }
 #content ul {
+	/* custom list bullet */
 	list-style-image: url("marker.gif");
 	list-style-position: inside;
 }
@@ -81,9 +90,11 @@ footer {
 	font-family: Georgia, "Times New Roman", serif;
 	font-size: 12px;
 	font-style: italic;
+	/* position the footer above the end of the content */
 	margin-left: 20px;
 	margin-top: 15px;
 }
+/* style for every time the name of the resort is mentioned */
 .resort {
 	font-weight: bold;
 	color: #00569f;
